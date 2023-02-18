@@ -1,6 +1,7 @@
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reactive.Linq;
 using System.Text;
 using ToDoList.Models;
@@ -55,7 +56,7 @@ namespace ToDoList.ViewModels
                 {
                     if (model != null) //Lorsque le résultat n'est pas null (donc bouton Ok), on ajoute le todoitem à la liste. 
                     {
-                        List.Items.Add(model);
+                        List.Items.Insert(0, model);
                     }
                     Content = List; //On remet List comme contenu visuel
                 });

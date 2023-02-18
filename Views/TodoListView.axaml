@@ -10,7 +10,9 @@
 		<Button DockPanel.Dock="Bottom"
 				Content="Ajouter une tâche"
 				Command="{Binding $parent[Window].DataContext.AddItem}"/>
-		<ItemsControl Items="{Binding Items}">
+		<ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+			
+		<ItemsControl Items="{Binding Items}" >
 			<ItemsControl.ItemTemplate>
 				<DataTemplate>
 					<!--Pour mettre du style autour de mon checkbox-->
@@ -21,5 +23,6 @@
 				</DataTemplate>
 			</ItemsControl.ItemTemplate>
 		</ItemsControl>
+		</ScrollViewer>
 	</DockPanel>
 </UserControl>
