@@ -18,11 +18,12 @@ namespace ToDoList
         {
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
+                //Créer une fausse base de donnée. En application, un EntityFramework serait très intéressant.
                 var db = new Database();
 
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainWindowViewModel(db),
+                    DataContext = new MainWindowViewModel(db), //On donne la bd au constructeur du viewmodel principal
                 };
             }
 

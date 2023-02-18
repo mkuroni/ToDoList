@@ -2,8 +2,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:ToDoList"
              x:Class="ToDoList.App">
-    <Application.DataTemplates>
-        <local:ViewLocator/>
+    <Application.DataTemplates> 
+		<!--Le ViewLocator défini un template qui prends un ViewModel et retourne sa View.
+		On peut donc injecter une view dans une window en lui passant un viewModel. La concordance des noms de fichiers est importante:
+		TodoViewModel vs TodoView. Il est instancié dans Application.Datatemplates. Il est inclu dans le projet au lieu de simplement faire
+		parti d'avalonia pour offrir l'option d'utiliser une autre méthode. ViewLocator est plutôt comme une solution standard.-->
+		<local:ViewLocator/>
     </Application.DataTemplates>
 
     <Application.Styles>
