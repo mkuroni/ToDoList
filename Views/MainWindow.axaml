@@ -7,8 +7,11 @@
         x:Class="ToDoList.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
 		Width="200" Height="300"
-        Title="Avalonia ToDo"
-		Content="{Binding Content}">
+        Title="Liste de Tâches AvaloniaUI"
+		Content="{Binding Content}"
+		TransparencyLevelHint="Blur"
+		Background="Transparent"
+		TransparencyBackgroundFallback="Transparent">
 	<!--Autre manière d'injecter-->
 	<!--<views:TodoListView/>-->
 </Window>

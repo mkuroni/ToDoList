@@ -5,8 +5,8 @@
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="300"
              x:Class="ToDoList.Views.AddItemView">
 	<DockPanel>
-		<Button DockPanel.Dock="Bottom" Content="Cancel" Command="{Binding Cancel}"/>
+		<Button DockPanel.Dock="Bottom" Content="Annuler" Command="{Binding Cancel}"/>
 		<Button DockPanel.Dock="Bottom" Content="Ok" Command="{Binding Ok}"/>
-		<TextBox AcceptsReturn="False" Text="{Binding Description}" Watermark="Entrez votre TODO"/>
+		<TextBox AcceptsReturn="False" Text="{Binding Description}" Watermark="Entrez une tâche"/>
 	</DockPanel>
 </UserControl>

@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="200" d:DesignHeight="400"
-             x:Class="ToDoList.Views.TodoListView">
+			 x:Class="ToDoList.Views.TodoListView">
 	<DockPanel>
 		<!--$parent est un relatif [Window] le type recherché-->
 		<!--Au lieu de créer un ICommand comme ne WPF, Avalonia permet de directement lier une méthode en commande-->
@@ -13,8 +13,11 @@
 		<ItemsControl Items="{Binding Items}">
 			<ItemsControl.ItemTemplate>
 				<DataTemplate>
-					<CheckBox Margin="4" IsChecked="{Binding IsChecked}"
-							  Content="{Binding Description}"/>
+					<!--Pour mettre du style autour de mon checkbox-->
+					<Border Background="{StaticResource LightBlur}" Margin="0,4">
+						<CheckBox Margin="10,5" IsChecked="{Binding IsChecked}"
+								  Content="{Binding Description}"/>
+					</Border>
 				</DataTemplate>
 			</ItemsControl.ItemTemplate>
 		</ItemsControl>
