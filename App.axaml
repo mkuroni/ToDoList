@@ -11,7 +11,7 @@
 	</Application.DataTemplates>
 	<!--Ressources globales de l'application-->
 	<Application.Resources>
-		<SolidColorBrush Color="Black" Opacity="0.4" x:Key="LightBlur"/>
+		<SolidColorBrush Color="Black" Opacity="0.4" x:Key="DarkBlur"/>
 	</Application.Resources>
 	<!--Styles de l'application-->
 	<Application.Styles>
@@ -19,9 +19,10 @@
 		<FluentTheme Mode="Dark"/>
 		<!--Style global pour les boutons de l'application-->
 		<Style Selector="Button">
-			<Setter	Property="Background" Value="{StaticResource LightBlur}"/>
+			<Setter	Property="Background" Value="{StaticResource DarkBlur}"/>
 			<Setter Property="HorizontalAlignment" Value="Stretch"/>
 			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="CornerRadius" Value="0"/>
 		</Style>
 	</Application.Styles>
 </Application>

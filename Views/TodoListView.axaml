@@ -14,7 +14,7 @@
 			<ItemsControl.ItemTemplate>
 				<DataTemplate>
 					<!--Pour mettre du style autour de mon checkbox-->
-					<Border Background="{StaticResource LightBlur}" Margin="0,4">
+					<Border Background="{StaticResource DarkBlur}" Margin="0,4">
 						<CheckBox Margin="10,5" IsChecked="{Binding IsChecked}"
 								  Content="{Binding Description}"/>
 					</Border>
